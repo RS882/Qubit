@@ -38,10 +38,7 @@
 	flex-direction: column;
 	&__title {
 		padding: 177 / $maxWidthContainer * 100% 0px 58 / $maxWidthContainer * 100% 0px;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 40px;
-		line-height: 112%;
+
 		color: $textSecondDark;
 	}
 
@@ -84,6 +81,12 @@
 			}
 		}
 	}
+}
+
+.title-page {
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 112%;
 }
 
 .date-grow {
