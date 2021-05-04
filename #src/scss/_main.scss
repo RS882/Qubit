@@ -1,0 +1,104 @@
+%title_style {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 54px;
+	line-height: 113%;
+}
+
+.main {
+	flex: 1 1 100vh;
+	max-height: 755px;
+	position: relative;
+
+	display: flex;
+
+	&__container {
+		flex: 1 1 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+
+	&__column {
+		flex: 1 1 100%;
+		max-width: 453px;
+		max-height: 366px;
+
+		display: flex;
+		flex-direction: column;
+		@media (max-width: $md3+px) {
+			max-height: none;
+			margin: 70px 0px 20px 0px;
+			justify-content: space-between;
+		}
+	}
+
+	&__slogan {
+		font-size: 15px;
+		line-height: 140%;
+		margin: 0px 0px 20px 0px;
+	}
+
+	&__title {
+		@extend %title_style;
+		//margin: 0px 0px -20px 0px;
+	}
+
+	&__subtitle {
+		@extend %title_style;
+		color: $textSecondBlue;
+		margin: 0px 0px 37px 0px;
+	}
+
+	&__article {
+		font-size: 18px;
+		line-height: 167%;
+		span {
+			font-weight: 900;
+		}
+	}
+
+	&__form {
+		width: 100%;
+		height: 45px;
+		display: flex;
+	}
+}
+
+.form {
+	font-size: 15px;
+	line-height: 140%;
+	&__input {
+		&_email {
+			flex: 1 1 100%;
+			max-width: 268px;
+			padding: 0px 0px 0px 26px;
+			border-radius: 999px 0 0 999px;
+		}
+		&_book {
+			flex: 1 1 100%;
+			max-width: 186px;
+			background-color: $textSecondBlue;
+			color: $textMainLight;
+			border-radius: 0 999px 999px 0;
+			transition: $transform-in;
+			&:hover,
+			&:active,
+			&:focus {
+				transition: $transform-out;
+				color: $textSecondBlue;
+				background-color: $textMainLight;
+				border: 1px solid $textSecondBlue;
+			}
+		}
+	}
+}
