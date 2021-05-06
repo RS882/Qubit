@@ -1,6 +1,7 @@
 .industry {
 	flex: 1 1 auto;
-	max-height: 751px;
+	max-height: 1003px;
+
 	@media (max-width: $md2+px) {
 		max-height: none;
 	}
