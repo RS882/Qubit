@@ -1,0 +1,106 @@
+.industry {
+	flex: 1 1 auto;
+	max-height: 751px;
+	@media (max-width: $md2+px) {
+		max-height: none;
+	}
+	&__container {
+		padding: 0 145 / $maxWidthContainer * 100%;
+	}
+
+	&__title {
+		padding: 94px 0px 12px 0px;
+		text-align: center;
+	}
+
+	&__subtitle {
+		font-size: 18px;
+		line-height: 167%;
+		text-align: center;
+		padding: 0px 0px 65px 0px;
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		gap: 30px;
+		padding: 0px 0px 100px 0px;
+		@media (max-width: $md2+px) {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(6, 1fr);
+		}
+	}
+
+	&__item {
+	}
+}
+
+.item-card {
+	border-radius: 8px 10px 10px 8px;
+	background: $bgdCard;
+	color: $textMainLight;
+
+	&__container {
+		padding: 0 45px 0 30px;
+		height: 200px;
+		display: flex;
+		flex-direction: column;
+	}
+	&__title-box {
+		padding: 35px 0px 0px 0px;
+		display: flex;
+		align-items: center;
+		@media (max-width: $md2+px) {
+			padding: 10px 0px 0px 0px;
+		}
+	}
+
+	&__img {
+		padding: 0px 24px 0px 0px;
+		img {
+			object-fit: cover;
+			width: 50px;
+			height: 50px;
+		}
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 139%;
+	}
+
+	&__text {
+		flex: 1 1 100%;
+
+		font-size: 15px;
+		line-height: 147%;
+	}
+
+	&__link {
+		margin: 0px 0px 35px 0px;
+		a {
+			font-size: 15px;
+			line-height: 100%;
+			color: $textMainLight;
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				top: calc(100% + 9px);
+				left: 0;
+				width: calc(100% + 30px);
+				height: 2px;
+				background: $textMainLight;
+				transition: $transform-in;
+			}
+			&:hover,
+			&:active,
+			&:focus {
+				color: $textSecondBlue;
+				transition: $transform-out;
+			}
+		}
+	}
+}
